@@ -142,6 +142,8 @@ Analysis spanning from 2012 to 2022 incorporates various variables such as popul
    printed_money_totals_df.plot(kind='bar', title='Money Printed Each Year in Billions')
    ```
 
+   ![Money Printed](./MWatkins_SupportFiles/MoneyPrinted_Year.png)
+
 #### _michael_sheridan.ipynb_
 
 #### _terry_hood.ipynb_
@@ -201,16 +203,20 @@ Collaboratively, we delved into the analysis of our findings, endeavoring to dis
 
 ---
 
+**Limits and Considerations**
+
 ### Sources
 
 ---
 
+- Python for Data Analysis - O'Reilly Books
 - Class Lessons
 - Instructor
 - Teacher Assistant
 - Classmates
 - Xpert Learning Assistant
 - GitHub Copilot
+- Tabnine
 
 * ([python](https://www.python.org/))
 * ([pandas](https://pandas.pydata.org/))
