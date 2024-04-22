@@ -110,7 +110,7 @@ Collaboratively, we delved into the analysis of our findings, endeavoring to dis
     # renaming the first column to year for the graphs below
     filtered_metro_df = filtered_metro_df.rename(columns={"RegionName":"Year"})
 
-    # and easier way to rename the columns in a for lloop so i dont have to write it out 10 times
+    # and easier way to rename the columns in a for loop so i don't have to write it out 10 times
     for i in range(2012,2023):
        filtered_metro_df = filtered_metro_df.rename(columns={f"{i}-01-31":f"{i}"})
 
@@ -135,7 +135,7 @@ Collaboratively, we delved into the analysis of our findings, endeavoring to dis
 7.  Further DF cleanup with iloc to remove additional reference to 2nd Washington City column and for loop with .plot command to plot the median home prices n the target cities.
 
     ```python
-    # drops extra washington from "Washington Michigan" from the dataframe
+    # drops extra washington from "Washington Michigan" from the DataFrame
     real_estate_prices_plot = real_estate_prices_plot.iloc[:, :-1]
 
     # this for loop loops through each city and plots a graph for it showing the increase to home values over 10 years
@@ -515,9 +515,9 @@ scaled_real_estate_prices_df = scaled_df = pd.DataFrame(scaled_real_estate_price
    ```python
    #Creates a list of years that HUD homeless data is available
    years = [2012, 2013, 2014, 2015, 2016, 2017, 2019, 2021,2022]
-   #Creates a list of CoCs that coorespond to the cities in the study
+   #Creates a list of CoCs that correspond respond to the cities in the study
    coc_name = ["San Francisco CoC", "Tampa/Hillsborough County CoC", "Miami-Dade County CoC", "Atlanta CoC","New Orleans/Jefferson Parish CoC", "Baltimore County CoC", "Detroit CoC", "Portland, Gresham/Multnomah County CoC", "Las Vegas/Clark County CoC", "District of Columbia CoC"]
-   #Inititalizes a list in order place the homeless data for each city per year
+   #Initializes a list in order place the homeless data for each city per year
    filtered_dataframes =[]
    for year in years:
       path = "./Michaels_CSVs/" + str(year) + ".csv"
@@ -550,7 +550,7 @@ scaled_real_estate_prices_df = scaled_df = pd.DataFrame(scaled_real_estate_price
 3. Further data refinement to adjust homeless numbers to percentage of population
 
    ```python
-   #Adusting homeless numbers to percentage of population
+   #Adjusting homeless numbers to percentage of population
    #population_data = population_data[~population_data.index.isin([6,8])]
    population_data.set_index('Year', inplace=True)
 
@@ -699,6 +699,8 @@ for x, city in enumerate(cities):
 
 1. List additional questions that surfaced during analysis
 
+- How much paper money is destroyed each year
+
 2. Additional research identified if time was available
 
 - The Most Valuable Housing Markets in America
@@ -709,7 +711,7 @@ for x, city in enumerate(cities):
 3. Future development or code architecture that would make continued analysis more streamlined and productive
 
 - Future endeavors could expand the scope by encompassing a comprehensive analysis of all markets across the United States, offering a more extensive perspective on potential correlations.
-- Moreover, our examination was restricted to only six potential influences on the market, overlooking crucial factors such as mortgage rates, short-term rentals, housing construction starts, and properties owned by investors. The absence of accessible data, particularly at the city level and within the timeframe of our study, hindered the exploration of these additional variables.
+- Moreover, our examination was restricted to only six potential influences on the market, overlooking crucial factors such as mortgage rates, short-term rentals, housing construction starts, and properties owned by investors. The absence of accessible data, particularly at the city level and within the time frame of our study, hindered the exploration of these additional variables.
 - Additionally, recent developments in the market, such as the Federal Reserve's actions to temper the housing market by increasing interest rates, have introduced significant changes. It's essential to recognize that adjustments in market variables often exhibit a lag in influence. Thus, it remains pertinent to monitor the impact of recent occurrences, such as population declines in many urban centers, on the real estate market.
 
 ### Results and Conclusions
